@@ -1,28 +1,31 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.server.json"
-    }
-  ],
   "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "types": ["node"],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@contracts/*": [
-        "./contracts/*"
-      ],
-      "@db/*": [
-        "./db/*"
-      ]
+      "@/*": ["./src/*"],
+      "@contracts/*": ["./contracts/*"],
+      "@db/*": ["./db/*"],
+      "db": ["./db"]
     }
-  }
+  },
+  "include": [
+    "src",
+    "api",
+    "api-server",
+    "contracts",
+    "db"
+  ]
 }
