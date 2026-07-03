@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "A comprehensive plantation tracking and monitoring platform with satellite NDVI analysis, AI verification, and token-based gamification.",
   "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build && esbuild api/boot.ts --platform=node --bundle --format=esm --outdir=dist --banner:js=\"import { createRequire } from 'module';const require = createRequire(import.meta.url);\"",
@@ -21,7 +24,6 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.965.0",
     "@aws-sdk/s3-request-presigner": "^3.965.0",
-    "@hono/node-server": "^1.14.3",
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
@@ -58,7 +60,6 @@
     "cmdk": "^1.1.1",
     "cookie": "^1.1.1",
     "date-fns": "^4.1.0",
-    "dotenv": "^17.2.3",
     "drizzle-orm": "^0.45.1",
     "embla-carousel-react": "^8.6.0",
     "hono": "^4.8.3",
